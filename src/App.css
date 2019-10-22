@@ -1,22 +1,68 @@
+body {
+
+}
+
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  width: 100vw;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #09d3ac;
+#NGbutton {
+  margin-right: 30px;
+  height: 2rem;
+  width: 5rem;
+  font-size: .8rem;
+  color: aquamarine;
+  background-color: darkcyan;
+  box-shadow: darkslategray 3px;
+}
+#NGbutton:active, :focus {
+  outline:none;
+}
+#NGbutton:hover {
+  background-color: cadetblue;
+  color: bisque;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(228, 228, 228);
+  border: 1px solid gray;
+  border-right: 3px solid rgb(55, 55, 55);
+  border-bottom: 3px solid rgb(26, 26, 26);
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(94, 94, 94);
+  font-size: 3rem;
+  margin-bottom:2px;
+}
+
+.square:hover {
+  background-color: #fff;
+  color: rgb(26, 26, 26);
+}
+
+#board {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: space-around;
+  width: 319px;
+  height: 319px;
+}
+
+.message {
+  color: red;
+}
+
+.win {
+  border: 1px solid rgb(249, 119, 119);
+  border-right: 3px solid rgb(255, 53, 53);
+  border-bottom: 3px solid rgb(255, 53, 53);
 }

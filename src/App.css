@@ -1,6 +1,9 @@
 body {
   background-color: #293462;
   color:#ec9b3b;
+  font-family: 'Prata', serif;
+  letter-spacing: 0.02rem;
+  font-weight: lighter;
 }
 
 .App {
@@ -12,51 +15,142 @@ body {
   align-items: center;
 }
 
-#infoContainer {
+#leftContainer {
+  height:270px;
+  width: 200px;
+  position: relative;
+  top:20px;
+}
+
+#title {
+
+}
+
+h2 {
+  margin: 0;
+  padding: 0;
+}
+
+#title small {
+  margin: 0;
+  padding: 0;
+}
+
+#title a {
+  text-decoration: none;
+  color: #d89037;
+}
+
+#title a:hover{
+  color: #ebb26e;
+}
+
+h3 {
+  font-weight: lighter;
+  text-decoration: underline;
+}
+
+h4 {
+  font-weight: lighter;
+}
+
+h5 {
+  font-weight: lighter;
+}
+
+#hcContainer{
   display:flex;
-  align-items:center;
+  flex-flow: row nowrap;
+  justify-content:center;
+  height:75%;
+  width: 200px;
+  background-color: #27305c;
+  border: solid .5px #ec9b3b;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: inset 0 0 5px 3px rgba(0,0,0,0.22);
+}
+
+#hc {
+  margin-left:0;
+  padding-left:19px;
+  position:relative;
+  top: 170px;
+  transition-duration: 0.5s;
+  animation: 15s scroll ease-in infinite;
+}
+
+@keyframes scroll {
+  0% {top:170px;}
+  100% {top:-300px;}
 }
 
 #info {
 display: flex;
-flex-flow: column nowrap;
-justify-content: start;
+flex-flow: row nowrap;
+justify-content: center;
 align-items: center;
-margin-right: 20px;
 text-align: center;
 }
 
-#info ul {
+#info img {
+  margin-right:20px;
+  border: solid 1px #ec9b3b;
+  border-radius: 5px;
+}
+
+ul {
   list-style: none;
   text-align: left;
+  padding-left:0;
+}
+
+ol {
+  text-align: left;
+}
+
+ol li {
+  margin-bottom: 0.4rem;
 }
 
 #info h5 {
   font-size: 1.3rem;
 }
 
+#rightContainer {
+  text-align: left;
+  height:316px;
+  width:150px;
+  position:relative;
+  top: 45px;
+}
+
 #NGbutton {
   margin-right: 30px;
-  height: 2rem;
-  width: 5rem;
-  font-size: .8rem;
-  color: aquamarine;
-  background-color: darkcyan;
-  box-shadow: darkslategray 5px;
+  height: 2.3rem;
+  width: 8rem;
+  font-family: 'Prata', serif;
+  font-size: 1rem;
+  color: #ec9b3b;
+  background-color: #63327a;
   margin:0;
+  border-radius: 8px;
+  border: solid 1px #ec9b3b;
+  box-shadow: 0 10px 15px rgba(0,0,0,0.25), 0 5px 5px rgba(0,0,0,0.22);
 }
 #NGbutton:active, :focus {
   outline:none;
+  background-color: rgb(69, 117, 119);
 }
 #NGbutton:hover {
-  background-color: cadetblue;
-  color: bisque;
+  background-color: #ec9b3b;
+  color: #63327a;
 }
 
 .square {
   width: 100px;
   height: 100px;
-  background-color: rgb(228, 228, 228);
+  background-color: #c1c7e2;
   border: 1px solid gray;
   border-right: 3px solid rgb(55, 55, 55);
   border-bottom: 3px solid rgb(26, 26, 26);
@@ -64,22 +158,33 @@ text-align: center;
   justify-content: center;
   align-items: center;
   color: rgb(94, 94, 94);
-  font-size: 3rem;
+  font-size: 5rem;
   margin-bottom:2px;
+  font-family: 'Monoton', cursive;
 }
 
 .square:hover {
-  background-color: #fff;
+  background-color: #ec9b3b;
   color: rgb(26, 26, 26);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.square:active {
+  background-color: #bb7b2d;
+  box-shadow: inset 0 0 5px 3px rgba(0,0,0,0.22);
+
 }
 
 .boardContainer {
   padding: 2px;
+  margin-left:30px;
+  margin-right:20px;
   border: 1px solid gray;
   border-right: 5px solid rgb(55, 55, 55);
   border-bottom: 5px solid rgb(26, 26, 26);
   width: 319px;
   height: 316px;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
 
@@ -92,12 +197,26 @@ text-align: center;
   height: 319px;
 }
 
+#message{
+  font-size: 1.2rem;
+}
+
 .message {
   color: red;
+  text-align:left;
 }
 
 .win {
   border: 1px solid rgb(249, 119, 119);
   border-right: 3px solid rgb(255, 53, 53);
   border-bottom: 3px solid rgb(255, 53, 53);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.X {
+  color: #63327a;
+}
+
+.O {
+  color: #df9439;
 }

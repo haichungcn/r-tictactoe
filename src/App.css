@@ -1,5 +1,6 @@
 body {
-
+  background-color: #293462;
+  color:#ec9b3b;
 }
 
 .App {
@@ -11,6 +12,29 @@ body {
   align-items: center;
 }
 
+#infoContainer {
+  display:flex;
+  align-items:center;
+}
+
+#info {
+display: flex;
+flex-flow: column nowrap;
+justify-content: start;
+align-items: center;
+margin-right: 20px;
+text-align: center;
+}
+
+#info ul {
+  list-style: none;
+  text-align: left;
+}
+
+#info h5 {
+  font-size: 1.3rem;
+}
+
 #NGbutton {
   margin-right: 30px;
   height: 2rem;
@@ -18,7 +42,8 @@ body {
   font-size: .8rem;
   color: aquamarine;
   background-color: darkcyan;
-  box-shadow: darkslategray 3px;
+  box-shadow: darkslategray 5px;
+  margin:0;
 }
 #NGbutton:active, :focus {
   outline:none;
@@ -47,6 +72,16 @@ body {
   background-color: #fff;
   color: rgb(26, 26, 26);
 }
+
+.boardContainer {
+  padding: 2px;
+  border: 1px solid gray;
+  border-right: 5px solid rgb(55, 55, 55);
+  border-bottom: 5px solid rgb(26, 26, 26);
+  width: 319px;
+  height: 316px;
+}
+
 
 #board {
   display: flex;
